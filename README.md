@@ -14,129 +14,136 @@
         }
         body {
             background-color: #1a1a2e;
-            padding: 10px; /* 缩小页面外边距 */
+            padding: 10px;
         }
-        /* 核心：容器宽度缩小到原页面1/2以下，原380px→170px */
         .calendar-card {
             max-width: 170px; 
             margin: 0 auto;
             background-color: #252540;
-            border-radius: 10px; /* 按比例缩小圆角 */
-            padding: 10px; /* 缩小内边距 */
-            box-shadow: 0 4px 10px rgba(0,0,0,0.4); /* 按比例缩小阴影 */
+            border-radius: 10px;
+            padding: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.4);
         }
         .card-title {
             text-align: center;
-            font-size: 16px; /* 缩小字体 */
+            font-size: 16px;
             color: #e0c3fc;
-            margin-bottom: 6px; /* 缩小间距 */
+            margin-bottom: 6px;
         }
-        .fish-stick-gif {
+        /* 2. 替换为CSS烟花彩带动画 */
+        .celebration {
             text-align: center;
-            margin-bottom: 4px; /* 缩小间距 */
+            font-size: 24px;
+            margin: 10px 0;
+            height: 40px; /* 固定高度，防止跳动 */
+            position: relative;
+            overflow: hidden;
         }
-        .fish-stick-gif img {
-            width: 50px; /* 图片缩小到原1/2以下 */
-            height: auto;
-            border-radius: 6px; /* 按比例缩小圆角 */
-            box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        .celebration span {
+            display: inline-block;
+            animation: confetti 3s infinite;
+            color: transparent;
+            text-shadow: 0 0 2px rgba(255,255,255,0.8);
+        }
+        .celebration span:nth-child(1) { animation-delay: 0s; color: #ff6b6b; }
+        .celebration span:nth-child(2) { animation-delay: 0.2s; color: #4ecdc4; }
+        .celebration span:nth-child(3) { animation-delay: 0.4s; color: #ffd166; }
+        .celebration span:nth-child(4) { animation-delay: 0.6s; color: #6a0dad; }
+        .celebration span:nth-child(5) { animation-delay: 0.8s; color: #06d6a0; }
+        .celebration span:nth-child(6) { animation-delay: 1s; color: #118ab2; }
+        .celebration span:nth-child(7) { animation-delay: 1.2s; color: #ef476f; }
+        .celebration span:nth-child(8) { animation-delay: 1.4s; color: #ff8fa3; }
+        @keyframes confetti {
+            0% { transform: translateY(0) rotate(0deg); opacity: 1; }
+            100% { transform: translateY(-20px) rotate(720deg); opacity: 0; }
         }
         .remind-text {
             text-align: center;
-            font-size: 11px; /* 缩小字体 */
+            font-size: 11px;
             color: #a8c7ff;
-            margin-bottom: 8px; /* 缩小间距 */
+            margin-bottom: 6px;
         }
         .time-section {
             text-align: center;
-            margin-bottom: 8px; /* 缩小间距 */
+            margin-bottom: 6px;
         }
         .current-time {
-            font-size: 20px; /* 缩小字体 */
+            font-size: 20px;
             color: #76efff;
             text-shadow: 0 0 4px #76efff, 0 0 6px #4cc9f0;
-            margin-bottom: 3px; /* 缩小间距 */
+            margin-bottom: 3px;
         }
         .current-date {
-            font-size: 12px; /* 缩小字体 */
+            font-size: 12px;
             color: #b0b0c8;
         }
         .greeting-text {
             text-align: center;
-            font-size: 14px; /* 缩小字体 */
+            font-size: 14px;
             color: #ffc8dd;
-            margin-bottom: 6px; /* 缩小间距 */
-        }
-        .rest-advice {
-            background-color: #2e2e4d;
-            border-radius: 8px; /* 按比例缩小圆角 */
-            padding: 8px; /* 缩小内边距 */
-            margin-bottom: 8px; /* 缩小间距 */
-        }
-        .rest-advice p {
-            font-size: 10px; /* 缩小字体 */
-            color: #e0e0e8;
-            text-align: center;
-            line-height: 1.4;
-            margin: 2px 0; /* 缩小间距 */
+            margin-bottom: 6px;
         }
         .all-holidays-count {
             background-color: #2e2e4d;
-            border-radius: 8px; /* 按比例缩小圆角 */
-            padding: 8px; /* 缩小内边距 */
-            margin-bottom: 8px; /* 缩小间距 */
+            border-radius: 8px;
+            padding: 6px;
+            margin-bottom: 6px;
         }
         .count-title {
-            font-size: 12px; /* 缩小字体 */
+            font-size: 12px;
             color: #a8c7ff;
             text-align: center;
-            margin-bottom: 6px; /* 缩小间距 */
+            margin-bottom: 4px;
         }
         .holiday-item {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 4px 0; /* 缩小间距 */
+            padding: 3px 0;
             border-bottom: 1px dashed #3d3d66;
         }
         .holiday-item:last-child {
             border-bottom: none;
         }
         .holiday-name {
-            font-size: 11px; /* 缩小字体 */
+            font-size: 11px;
             color: #e0c3fc;
         }
         .holiday-days {
-            font-size: 11px; /* 缩小字体 */
+            font-size: 11px;
             color: #76efff;
             font-weight: bold;
         }
         .warm-sentence {
             text-align: center;
-            font-size: 12px; /* 缩小字体 */
+            font-size: 12px;
             color: #ffc8dd;
-            padding: 8px; /* 缩小内边距 */
+            padding: 6px;
             background-color: #2e2e4d;
-            border-radius: 8px; /* 按比例缩小圆角 */
+            border-radius: 8px;
         }
     </style>
 </head>
 <body>
     <div class="calendar-card">
         <h2 class="card-title">开心日历</h2>
-        <div class="fish-stick-gif">
-            < img src="https://media.giphy.com/media/3ohs7R4xM7g8QdK4wo/giphy.gif" alt="摸鱼棒动图">
+        <!-- 1. 替换为CSS烟花彩带 -->
+        <div class="celebration">
+            <span>✦</span>
+            <span>❀</span>
+            <span>✧</span>
+            <span>★</span>
+            <span>✽</span>
+            <span>❃</span>
+            <span>✺</span>
+            <span>✻</span>
         </div>
-        <div class="remind-text">[摸鱼棒] 已就位，记得休息～</div>
+        <div class="remind-text">精彩瞬间，值得期待～</div>
         <div class="time-section">
             <div class="current-time" id="currentTime"></div>
             <div class="current-date" id="currentDate"></div>
         </div>
         <div class="greeting-text" id="greetingText"></div>
-        <div class="rest-advice">
-            <p>摸鱼人，工作再忙别硬扛～</p >
-            <p>起身去茶水间，或廊道走一走呀～</p >
-        </div>
         <div class="all-holidays-count">
             <div class="count-title">2026年法定节假日倒计时</div>
             <div class="holiday-item">
@@ -199,7 +206,7 @@
         setGreeting();
         setInterval(setGreeting, 3600000);
 
-        // 计算天数
+        // 节假日倒计时
         function calculateDays(targetDate) {
             const now = new Date();
             let target = new Date(targetDate);
@@ -213,7 +220,6 @@
             return Math.ceil(timeDiff / (1000 * 60 * 60 * 24));
         }
 
-        // 节日日期
         const holidays = {
             newYear: new Date(2026, 0, 1),
             springFestival: new Date(2026, 1, 17),
@@ -224,7 +230,6 @@
             nationalDay: new Date(2026, 9, 1)
         };
 
-        // 更新倒计时
         function updateAllHolidayDays() {
             document.getElementById('dayNewYear').textContent = `${calculateDays(holidays.newYear)} 天`;
             document.getElementById('daySpringFestival').textContent = `${calculateDays(holidays.springFestival)} 天`;
@@ -237,19 +242,27 @@
         updateAllHolidayDays();
         setInterval(updateAllHolidayDays, 86400000);
 
-        // 随机温馨句子
+        // 温馨话语
         const sentences = [
-            '摸鱼棒在手，快乐我有～',
-            '努力很重要，休息也必要呀～',
-            '今天摸5分钟，明天效率冲～',
-            '久坐会累，起来活动下再继续吧～'
+            '累了就歇会儿，休息是为了更好出发～',
+            '今天的努力不会白费，坚持下去呀～',
+            '生活需要小确幸，记得给自己多些鼓励～',
+            '偶尔放慢脚步也没关系，明天继续向前～',
+            '每一点付出都有意义，你真的很棒呀～',
+            '别忘记喝水，照顾好自己才能更有力量～',
+            '今天也在认真生活，为这样的你点赞～',
+            '眼睛累了就远眺，让身心一起放个假～',
+            '努力的同时别焦虑，你已经在慢慢变好～',
+            '生活虽忙，也要留一点时间给自己～',
+            '哪怕进步一点点，也是值得开心的事～',
+            '累了就深呼吸，调整状态再继续加油～'
         ];
         function setRandomSentence() {
             const randomIdx = Math.floor(Math.random() * sentences.length);
             document.getElementById('warmSentence').textContent = sentences[randomIdx];
         }
         setRandomSentence();
-        setInterval(setRandomSentence, 1800000);
+        setInterval(setRandomSentence, 30000);
     </script>
 </body>
 </html>
